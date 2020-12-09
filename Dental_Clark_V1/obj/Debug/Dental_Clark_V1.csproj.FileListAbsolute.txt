@@ -1,0 +1,14 @@
+C:\Users\dell\source\repos\Dental_Clark_V1\Dental_Clark_V1\bin\Debug\Dental_Clark_V1.exe.config
+C:\Users\dell\source\repos\Dental_Clark_V1\Dental_Clark_V1\bin\Debug\Dental_Clark_V1.exe
+C:\Users\dell\source\repos\Dental_Clark_V1\Dental_Clark_V1\bin\Debug\Dental_Clark_V1.pdb
+C:\Users\dell\source\repos\Dental_Clark_V1\Dental_Clark_V1\obj\Debug\Dental_Clark_V1.csprojAssemblyReference.cache
+C:\Users\dell\source\repos\Dental_Clark_V1\Dental_Clark_V1\obj\Debug\Dental_Clark_V1.login.resources
+C:\Users\dell\source\repos\Dental_Clark_V1\Dental_Clark_V1\obj\Debug\Dental_Clark_V1.Properties.Resources.resources
+C:\Users\dell\source\repos\Dental_Clark_V1\Dental_Clark_V1\obj\Debug\Dental_Clark_V1.csproj.GenerateResource.cache
+C:\Users\dell\source\repos\Dental_Clark_V1\Dental_Clark_V1\obj\Debug\Dental_Clark_V1.csproj.CoreCompileInputs.cache
+C:\Users\dell\source\repos\Dental_Clark_V1\Dental_Clark_V1\obj\Debug\Dental_Clark_V1.exe
+C:\Users\dell\source\repos\Dental_Clark_V1\Dental_Clark_V1\obj\Debug\Dental_Clark_V1.pdb
+C:\Users\dell\source\repos\Dental_Clark_V1\Dental_Clark_V1\obj\Debug\Dental_Clark_V1.home.resources
+C:\Users\dell\source\repos\Dental_Clark_V1\Dental_Clark_V1\obj\Debug\Dental_Clark_V1.patients.resources
+C:\Users\dell\source\repos\Dental_Clark_V1\Dental_Clark_V1\obj\Debug\Dental_Clark_V1.patient.resources
+C:\Users\dell\source\repos\Dental_Clark_V1\Dental_Clark_V1\obj\Debug\Dental_Clark_V1.history.resources

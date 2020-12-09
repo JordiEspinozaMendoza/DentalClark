@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dental_Clark_V1", "Dental_Clark_V1\Dental_Clark_V1.csproj", "{92D277F6-3D9B-4B2E-8D29-461D33EC8CF3}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{9495717D-5C6F-4A47-B01D-3207C547A752}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{92D277F6-3D9B-4B2E-8D29-461D33EC8CF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92D277F6-3D9B-4B2E-8D29-461D33EC8CF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92D277F6-3D9B-4B2E-8D29-461D33EC8CF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92D277F6-3D9B-4B2E-8D29-461D33EC8CF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9495717D-5C6F-4A47-B01D-3207C547A752}.Debug|Any CPU.ActiveCfg = Debug
+		{9495717D-5C6F-4A47-B01D-3207C547A752}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E3E7B082-8BA9-4B29-B1FA-ABB215AB9812}
+	EndGlobalSection
+EndGlobal
