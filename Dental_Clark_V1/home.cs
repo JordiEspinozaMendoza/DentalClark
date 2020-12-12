@@ -36,13 +36,41 @@ namespace Dental_Clark_V1
 
             DataTable dt = c.SelectConsultsForToday(dateFormated);
             dgvConsults.DataSource = dt;
+
+            FillComboBoxName();
+
         }
 
         private void exit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+        void FillComboBoxName()
+        {
+            Dictionary<int, string> dsource = new Dictionary<int, string>();
 
+            SqlConnection conn = new SqlConnection(myconnstrng);
+
+            conn.Open();
+            SqlCommand cmd = new SqlCommand($"SELECT * FROM patients_table", conn);
+
+            SqlDataReader da = cmd.ExecuteReader();
+            while (da.Read())
+            {
+
+                string name = da.GetValue(7).ToString();
+                int id = (int)da.GetValue(0);
+                dsource.Add(id, name);
+
+            }
+            conn.Close();
+            txtUsername.DataSource = new BindingSource(dsource, null);
+            txtUsername.DisplayMember = "value";
+            txtUsername.ValueMember = "key";
+
+
+
+        }
         private void register_Click(object sender, EventArgs e)
         {
             //Get the value from the input fields
@@ -134,7 +162,7 @@ namespace Dental_Clark_V1
             txtConsultInfo.Text = dgvConsults.Rows[rowIndex].Cells[3].Value.ToString();
             txtIncharge.Text = dgvConsults.Rows[rowIndex].Cells[4].Value.ToString();
             txtPhone.Text = dgvConsults.Rows[rowIndex].Cells[5].Value.ToString();
-            
+
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -182,10 +210,11 @@ namespace Dental_Clark_V1
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             patients patients = new patients();
             patients.ShowDialog();
-
+            
+            
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -196,28 +225,106 @@ namespace Dental_Clark_V1
         private void txtUsername_TextChanged(object sender, EventArgs e)
         {
             SqlConnection conn = new SqlConnection(myconnstrng);
-
-            conn.Open();
-            if (txtUsername.Text != "" && txtUsername.SelectedValue.ToString() != "")
+            try
             {
-                SqlCommand cmd = new SqlCommand($"SELECT Email, Phone FROM patients_table WHERE patientID = @patientID", conn);
-                cmd.Parameters.AddWithValue("@patientID", int.Parse(txtUsername.SelectedValue.ToString()));
-                SqlDataReader da = cmd.ExecuteReader();
-                while (da.Read())
+                string test = txtUsername.SelectedValue.ToString();
+                int i = int.Parse(test);
+                conn.Open();
+                if (txtUsername.Text != "" && txtUsername.SelectedValue.ToString() != "")
                 {
-                    txtEmail.Text = da.GetValue(0).ToString();
-                    txtPhone.Text = da.GetValue(1).ToString();
+                    SqlCommand cmd = new SqlCommand($"SELECT Email, Phone FROM patients_table WHERE patientID = @patientID", conn);
+                    cmd.Parameters.AddWithValue("@patientID", i);
+                    SqlDataReader da = cmd.ExecuteReader();
+                    while (da.Read())
+                    {
+                        txtEmail.Text = da.GetValue(0).ToString();
+                        txtPhone.Text = da.GetValue(1).ToString();
+                    }
+                    conn.Close();
                 }
-                conn.Close();
+            }
+            catch (Exception ex)
+            {
+
             }
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             history history = new history();
             history.ShowDialog();
+            
+        }
 
+        private void home_DoubleClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            DialogResult d = MessageBox.Show("¿Seguro que deseas cerrar sesión?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (d == DialogResult.Yes)
+            {
+                this.Hide();
+                login login = new login();
+                login.ShowDialog();
+            }
+
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            home home = new home();
+            this.Hide();
+
+            home.ShowDialog();
         }
     }
 }

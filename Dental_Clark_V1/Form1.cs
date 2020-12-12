@@ -41,8 +41,15 @@ namespace Dental_Clark_V1
         private void button1_Click(object sender, EventArgs e)
         {
             home home = new home();
+            Loading loading = new Loading();
             this.Hide();
+            loading.ShowDialog();
             home.Show();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

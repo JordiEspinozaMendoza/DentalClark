@@ -163,5 +163,48 @@ namespace Dental_Clark_V1
                 Clear();
             }
         }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            DialogResult d = MessageBox.Show("¿Seguro que deseas cerrar sesión?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (d == DialogResult.Yes)
+            {
+                this.Hide();
+                login login = new login();
+                login.ShowDialog();
+            }
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            history history = new history();
+            history.ShowDialog();
+            
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void exit_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            home home = new home();
+            this.Hide();
+
+            home.ShowDialog();
+        }
     }
 }

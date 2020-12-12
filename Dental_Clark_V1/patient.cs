@@ -94,20 +94,52 @@ namespace Dental_Clark_V1
         static string table = "consult_table";
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(myconnstrng);
 
-            //Get the value from txt box
-            string keyword = txtSearch.Text;
-            string sql = $"SELECT * FROM {table} WHERE consultDetail LIKE '%{keyword}%' AND patientID = @patientID"; ;
-            SqlCommand cmd = new SqlCommand(sql, conn);
+        }
 
-            cmd.Parameters.AddWithValue("@patientID", patientID);
-            SqlDataAdapter sqlData = new SqlDataAdapter(cmd);
-            
-            DataTable dt = new DataTable();
-            sqlData.Fill(dt);
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            DialogResult d = MessageBox.Show("¿Seguro que deseas cerrar sesión?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (d == DialogResult.Yes)
+            {
+                this.Hide();
+                login login = new login();
+                login.ShowDialog();
+            }
+        }
 
-            dgvConsults.DataSource = dt;
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            history history = new history();
+            history.ShowDialog();
+
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            patients patients = new patients();
+            patients.ShowDialog();
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void exit_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            home home = new home();
+            this.Hide();
+
+            home.ShowDialog();
         }
     }
 }
