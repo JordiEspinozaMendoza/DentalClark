@@ -112,7 +112,7 @@ namespace Dental_Clark_V1
         }
         private void btnInfo_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            
             //patient patientInfo = new patient(name, lastname, age, gender, phone, id, email);
             patient patientInfo = new patient();
             patientInfo.name = name;
@@ -123,9 +123,8 @@ namespace Dental_Clark_V1
             patientInfo.phone = phone;
             patientInfo.gender = gender;
 
-
-
-            patientInfo.ShowDialog();
+            patientInfo.Show();
+            
         }
         static string myconnstrng = ConfigurationManager.ConnectionStrings["connstrng"].ConnectionString;
         static string table = "patients_table";

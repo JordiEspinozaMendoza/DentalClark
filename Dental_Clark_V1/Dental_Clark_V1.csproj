@@ -76,11 +76,17 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="history.cs">
+    <Compile Include="Forms\history.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="history.Designer.cs">
+    <Compile Include="Forms\history.Designer.cs">
       <DependentUpon>history.cs</DependentUpon>
+    </Compile>
+    <Compile Include="layout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="layout.Designer.cs">
+      <DependentUpon>layout.cs</DependentUpon>
     </Compile>
     <Compile Include="Loading.cs">
       <SubType>Form</SubType>
@@ -88,22 +94,22 @@
     <Compile Include="Loading.Designer.cs">
       <DependentUpon>Loading.cs</DependentUpon>
     </Compile>
-    <Compile Include="patient.cs">
+    <Compile Include="Forms\patient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="patient.Designer.cs">
+    <Compile Include="Forms\patient.Designer.cs">
       <DependentUpon>patient.cs</DependentUpon>
     </Compile>
-    <Compile Include="home.cs">
+    <Compile Include="Forms\home.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="home.Designer.cs">
+    <Compile Include="Forms\home.Designer.cs">
       <DependentUpon>home.cs</DependentUpon>
     </Compile>
-    <Compile Include="patients.cs">
+    <Compile Include="Forms\patients.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="patients.Designer.cs">
+    <Compile Include="Forms\patients.Designer.cs">
       <DependentUpon>patients.cs</DependentUpon>
     </Compile>
     <Compile Include="patientsClass.cs" />
@@ -112,19 +118,22 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="history.resx">
+    <EmbeddedResource Include="Forms\history.resx">
       <DependentUpon>history.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="home.resx">
+    <EmbeddedResource Include="Forms\home.resx">
       <DependentUpon>home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="layout.resx">
+      <DependentUpon>layout.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Loading.resx">
       <DependentUpon>Loading.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="patient.resx">
+    <EmbeddedResource Include="Forms\patient.resx">
       <DependentUpon>patient.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="patients.resx">
+    <EmbeddedResource Include="Forms\patients.resx">
       <DependentUpon>patients.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

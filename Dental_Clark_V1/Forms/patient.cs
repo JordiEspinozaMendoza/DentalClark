@@ -94,7 +94,15 @@ namespace Dental_Clark_V1
         static string table = "consult_table";
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
+            //Get the value from txt box
+            string keyword = txtSearch.Text;
 
+            SqlConnection conn = new SqlConnection(myconnstrng);
+            SqlDataAdapter sqlData = new SqlDataAdapter($"SELECT * FROM {table} WHERE Name LIKE '%{keyword}%' OR consultDetail LIKE '%{keyword}%'", conn);
+            DataTable dt = new DataTable();
+            sqlData.Fill(dt);
+
+            dgvConsults.DataSource = dt;
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
@@ -140,6 +148,11 @@ namespace Dental_Clark_V1
             this.Hide();
 
             home.ShowDialog();
+        }
+
+        private void exit_Click_2(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

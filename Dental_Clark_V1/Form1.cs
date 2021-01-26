@@ -10,8 +10,12 @@ using System.Windows.Forms;
 
 namespace Dental_Clark_V1
 {
+
     public partial class login : Form
     {
+        layout home = new layout();
+
+
         public login()
         {
             InitializeComponent();
@@ -40,7 +44,6 @@ namespace Dental_Clark_V1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            home home = new home();
             Loading loading = new Loading();
             this.Hide();
             loading.ShowDialog();
