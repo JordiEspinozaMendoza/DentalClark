@@ -33,6 +33,7 @@ namespace Dental_Clark_V1.DentalClarkClasses
             //1. DB connection
             SqlConnection conn = new SqlConnection(myconnstrng);
             DataTable dt = new DataTable();
+            MessageBox.Show(myconnstrng);
             try
             {
                 //2. Writing SQL Query

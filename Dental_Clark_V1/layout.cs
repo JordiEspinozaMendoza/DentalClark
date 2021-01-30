@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -34,10 +35,10 @@ namespace Dental_Clark_V1
             childForm.BringToFront();
             childForm.Show();
         }
-
         private void layout_Load(object sender, EventArgs e)
         {
-
+            string myconnstrng = ConfigurationManager.ConnectionStrings["connstrng"].ConnectionString;
+            MessageBox.Show(myconnstrng);
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)

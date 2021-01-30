@@ -22,6 +22,8 @@ namespace Dental_Clark_V1.DentalClarkClasses
 
         static string myconnstrng = ConfigurationManager.ConnectionStrings["connstrng"].ConnectionString;
         static string table = "patients_table";
+
+
         //Selecting data from DB
         public DataTable Select()
         {
