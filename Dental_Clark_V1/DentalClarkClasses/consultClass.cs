@@ -24,7 +24,8 @@ namespace Dental_Clark_V1.DentalClarkClasses
 
         public string dateFormated { get; set; }
 
-        static string myconnstrng = ConfigurationManager.ConnectionStrings["connstrng"].ConnectionString;
+        //static string myconnstrng = ConfigurationManager.ConnectionStrings["connstrng"].ConnectionString;
+        static string myconnstrng = "Data Source=DESKTOP-VKEH4OM;Integrated Security=SSPI;Initial Catalog='Dental Clark'";
         static string table = "consult_table";
 
         //Selecting data from DB
@@ -33,7 +34,7 @@ namespace Dental_Clark_V1.DentalClarkClasses
             //1. DB connection
             SqlConnection conn = new SqlConnection(myconnstrng);
             DataTable dt = new DataTable();
-            MessageBox.Show(myconnstrng);
+            //MessageBox.Show(myconnstrng);
             try
             {
                 //2. Writing SQL Query

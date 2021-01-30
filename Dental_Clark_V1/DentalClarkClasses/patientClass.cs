@@ -20,7 +20,8 @@ namespace Dental_Clark_V1.DentalClarkClasses
         public string Email { get; set; }
         public int Age { get; set; }
 
-        static string myconnstrng = ConfigurationManager.ConnectionStrings["connstrng"].ConnectionString;
+        // = ConfigurationManager.ConnectionStrings["connstrng"].ConnectionString;
+        static string myconnstrng = "Data Source=DESKTOP-VKEH4OM;Integrated Security=SSPI;Initial Catalog='Dental Clark'";
         static string table = "patients_table";
 
 
